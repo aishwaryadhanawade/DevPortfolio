@@ -15,17 +15,17 @@ export default function ContactSection() {
     {
       icon: <Mail className="w-6 h-6 text-purple-400" />,
       title: "Email Us",
-      details: "info@devmanus.com",
+      details: "aishwaryadhanawade612@gmail.com",
     },
-    {
-      icon: <Phone className="w-6 h-6 text-pink-400" />,
-      title: "Call Us",
-      details: "+1 (555) 123-4567",
-    },
+    // {
+    //   icon: <Phone className="w-6 h-6 text-pink-400" />,
+    //   title: "Call Us",
+    //   details: "+1 (555) 123-4567",
+    // },
     {
       icon: <MapPin className="w-6 h-6 text-blue-400" />,
       title: "Visit Us",
-      details: "123 Innovation St, Tech City",
+      details: "Mumbai, India",
     },
   ]
 
@@ -119,7 +119,7 @@ export default function ContactSection() {
                 ))}
               </div>
 
-              <div className="mt-12">
+              {/* <div className="mt-12">
                 <h4 className="font-medium mb-4">Follow Us</h4>
                 <div className="flex space-x-4">
                   {["Twitter", "LinkedIn", "Instagram", "GitHub"].map((social, index) => (
@@ -134,7 +134,7 @@ export default function ContactSection() {
                     </motion.a>
                   ))}
                 </div>
-              </div>
+              </div> */}
             </div>
           </motion.div>
         </div>

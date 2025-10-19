@@ -89,16 +89,14 @@ export default function HeroSection() {
           animate={{ opacity: 1, scale: 1, rotate: 0 }}
           transition={{ duration: 0.8, ease: "easeOut", delay: 0.2 }}
         >
-          <div className="relative w-full max-w-md aspect-square">
-            <div className="absolute inset-0 glass rounded-2xl overflow-hidden gradient-border">
-              <Image
-                src="/placeholder.svg?height=600&width=600"
-                alt="Digital Experience"
-                width={600}
-                height={600}
-                className="w-full h-full object-cover opacity-80"
-              />
-            </div>
+          <div className="relative w-full max-w-md aspect-square overflow-hidden rounded-2xl">
+            <Image
+              src="https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=600&h=600&fit=crop"
+              alt="Digital Experience"
+              width={600}
+              height={600}
+              className="w-full h-full object-cover"
+            />
           </div>
         </motion.div>
       </div>

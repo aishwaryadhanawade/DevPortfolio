@@ -23,24 +23,24 @@ export default function Footer() {
         { name: "Digital Marketing", href: "#" },
       ],
     },
-    {
-      title: "Resources",
-      links: [
-        { name: "Documentation", href: "#" },
-        { name: "Tutorials", href: "#" },
-        { name: "Case Studies", href: "#" },
-        { name: "FAQs", href: "#" },
-      ],
-    },
-    {
-      title: "Legal",
-      links: [
-        { name: "Privacy Policy", href: "#" },
-        { name: "Terms of Service", href: "#" },
-        { name: "Cookie Policy", href: "#" },
-        { name: "GDPR", href: "#" },
-      ],
-    },
+    // {
+    //   title: "Resources",
+    //   links: [
+    //     { name: "Documentation", href: "#" },
+    //     { name: "Tutorials", href: "#" },
+    //     { name: "Case Studies", href: "#" },
+    //     { name: "FAQs", href: "#" },
+    //   ],
+    // },
+    // {
+    //   title: "Legal",
+    //   links: [
+    //     { name: "Privacy Policy", href: "#" },
+    //     { name: "Terms of Service", href: "#" },
+    //     { name: "Cookie Policy", href: "#" },
+    //     { name: "GDPR", href: "#" },
+    //   ],
+    // },
   ]
 
   return (
@@ -62,7 +62,7 @@ export default function Footer() {
                 We create innovative digital solutions that help businesses grow and succeed in the digital age.
               </p>
             </motion.div>
-            <motion.div
+            {/* <motion.div
               className="flex space-x-4"
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -78,7 +78,7 @@ export default function Footer() {
                   {social[0]}
                 </a>
               ))}
-            </motion.div>
+            </motion.div> */}
           </div>
 
           {footerLinks.map((column, columnIndex) => (

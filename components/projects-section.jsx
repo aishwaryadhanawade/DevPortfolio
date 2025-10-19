@@ -15,6 +15,7 @@ export default function ProjectsSection() {
       description: "A full-featured e-commerce platform with payment integration and inventory management.",
       image: "/placeholder.svg?height=600&width=800",
       color: "purple",
+      link: "https://v0-interview-management-dashboard.vercel.app/login",
     },
     {
       title: "Health & Fitness App",
@@ -22,6 +23,7 @@ export default function ProjectsSection() {
       description: "A cross-platform mobile app for tracking fitness goals and health metrics.",
       image: "/placeholder.svg?height=600&width=800",
       color: "pink",
+      link: "https://example-fitness.com",
     },
     {
       title: "Financial Dashboard",
@@ -29,6 +31,7 @@ export default function ProjectsSection() {
       description: "An intuitive dashboard for visualizing complex financial data and analytics.",
       image: "/placeholder.svg?height=600&width=800",
       color: "blue",
+      link: "https://example-dashboard.com",
     },
     {
       title: "AI Content Generator",
@@ -36,6 +39,7 @@ export default function ProjectsSection() {
       description: "An AI-powered tool that generates high-quality content for marketing teams.",
       image: "/placeholder.svg?height=600&width=800",
       color: "purple",
+      link: "https://example-ai-generator.com",
     },
   ]
 
@@ -100,13 +104,16 @@ export default function ProjectsSection() {
                   <div className="p-6">
                     <h3 className="text-2xl font-bold mb-2">{projects[activeIndex].title}</h3>
                     <p className="text-gray-300">{projects[activeIndex].description}</p>
-                    <motion.button
-                      className="mt-4 px-6 py-2 rounded-full bg-white/10 hover:bg-white/20 transition-colors"
+                    <motion.a
+                      href={projects[activeIndex].link}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-block mt-4 px-6 py-2 rounded-full bg-white/10 hover:bg-white/20 transition-colors"
                       whileHover={{ scale: 1.05 }}
                       whileTap={{ scale: 0.98 }}
                     >
-                      View Case Study
-                    </motion.button>
+                      Visit Case Study
+                    </motion.a>
                   </div>
                 </GlowingCard>
               </motion.div>
