@@ -29,6 +29,44 @@ export default function ContactSection() {
     },
   ]
 
+ const handleSubmit = (e) => {
+      e.preventDefault()
+      const name = document.getElementById("name")?.value.trim()
+      const from = document.getElementById("email")?.value.trim()
+      const subject = document.getElementById("subject")?.value.trim()
+      const message = document.getElementById("message")?.value.trim()
+
+      if (!name || !from || !subject || !message) {
+        alert("Please fill in all fields.")
+        return
+      }
+
+      const to = "aishwaryadhanawade612@gmail.com"
+      const mailSubject = `${subject} — from ${name}`
+      const body = `Name: ${name}\nEmail: ${from}\n\n${message}`
+
+      window.location.href = `mailto:${to}?subject=${encodeURIComponent(mailSubject)}&body=${encodeURIComponent(body)}`
+      // Example using EmailJS for sending emails
+      const serviceID = 'service_nqlei7x';
+      const templateID = 'template_rtypaag';
+      const userID = 'AXP1tZQ9Prof4uwQT';
+
+      emailjs.send(serviceID, templateID, {
+        from_name: name,
+        from_email: from,
+        subject: subject,
+        message: message,
+      }, userID)
+      .then((response) => {
+        console.log('Email sent successfully!', response.status, response.text);
+        alert("Message sent successfully!");
+      })
+      .catch((error) => {
+        console.error('Failed to send email:', error);
+        alert("Failed to send message. Please try again later.");
+      });
+      
+    }
   return (
     <section id="contact" className="py-20 relative overflow-hidden">
       <div className="absolute inset-0 bg-gradient-to-tr from-purple-900/20 via-black to-blue-900/20 z-[-1]" />
@@ -85,7 +123,7 @@ export default function ContactSection() {
                   ></textarea>
                 </div>
                 <div>
-                  <GlowingButton type="submit">Send Message</GlowingButton>
+                  <GlowingButton type="submit" onClick={handleSubmit}>Send Message</GlowingButton>
                 </div>
               </form>
             </div>
