@@ -115,7 +115,7 @@ export default function ProjectsSection() {
                       whileHover={{ scale: 1.05 }}
                       whileTap={{ scale: 0.98 }}
                     >
-                      Visit Case Study
+                      View Demo
                     </motion.a>
                     ):<div>
                       Client-hosted web application (private deployment)
