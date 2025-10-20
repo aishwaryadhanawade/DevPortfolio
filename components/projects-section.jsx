@@ -4,43 +4,45 @@ import { useState } from "react"
 import { motion, AnimatePresence } from "framer-motion"
 import Image from "next/image"
 import GlowingCard from "./ui/glowing-card"
+import buildCraft from "@/assets/buildCraf.png"
+import wanderlust from "@/assets/wanderlust.png"
+import bpo from "@/assets/bpo3.jpg"
 
 export default function ProjectsSection() {
   const [activeIndex, setActiveIndex] = useState(0)
 
   const projects = [
     {
-      title: "E-Commerce Platform",
-      category: "Web Development",
-      description: "A full-featured e-commerce platform with payment integration and inventory management.",
-      image: "/placeholder.svg?height=600&width=800",
+      title: "BuildCraft",
+      category: "Landing Pange , React Js , Tailwind CSS, UI/UX Design",
+      description: "Built a high-performance real estate landing page using React.js, optimized for lead generation and smooth property browsing.",
+      image: buildCraft,
       color: "purple",
-      link: "https://v0-interview-management-dashboard.vercel.app/login",
+      link: "https://v0-construction-website-ruddy-kappa.vercel.app/",
     },
     {
-      title: "Health & Fitness App",
-      category: "Mobile Development",
-      description: "A cross-platform mobile app for tracking fitness goals and health metrics.",
-      image: "/placeholder.svg?height=600&width=800",
+      title: "Wanderlust",
+      category: "Next Js , Tailwind CSS, Web Application",
+      description: "Built a dynamic travel agency platform using Next.js, designed for performance, responsiveness, and user engagement.",
+      image: wanderlust,
       color: "pink",
-      link: "https://example-fitness.com",
+      link: "https://wenderlust.vercel.app/",
     },
     {
-      title: "Financial Dashboard",
-      category: "UI/UX Design",
-      description: "An intuitive dashboard for visualizing complex financial data and analytics.",
-      image: "/placeholder.svg?height=600&width=800",
+    title: "BPO Dashboard",
+      category: "Web Application, Data Visualization, Business Intelligence",
+      description: "Developed a React.js-based BPO break management system to streamline employee breaks and improve operational efficiency.",
+      image: bpo,
       color: "blue",
-      link: "https://example-dashboard.com",
     },
-    {
-      title: "AI Content Generator",
-      category: "AI Integration",
-      description: "An AI-powered tool that generates high-quality content for marketing teams.",
-      image: "/placeholder.svg?height=600&width=800",
-      color: "purple",
-      link: "https://example-ai-generator.com",
-    },
+    // {
+    //   title: "AI Content Generator",
+    //   category: "AI Integration",
+    //   description: "An AI-powered tool that generates high-quality content for marketing teams.",
+    //   image: "/placeholder.svg?height=600&width=800",
+    //   color: "purple",
+    //   link: "https://example-ai-generator.com",
+    // },
   ]
 
   return (
@@ -57,7 +59,7 @@ export default function ProjectsSection() {
             Recent <span className="gradient-text">Projects</span>
           </h2>
           <p className="text-gray-300 max-w-2xl mx-auto">
-            Explore our latest work and see how we've helped businesses achieve their digital goals.
+            Explore our latest work and discover the creativity behind every project
           </p>
         </motion.div>
 
@@ -104,8 +106,9 @@ export default function ProjectsSection() {
                   <div className="p-6">
                     <h3 className="text-2xl font-bold mb-2">{projects[activeIndex].title}</h3>
                     <p className="text-gray-300">{projects[activeIndex].description}</p>
-                    <motion.a
-                      href={projects[activeIndex].link}
+                    {projects[activeIndex]?.link ? (
+                      <motion.a
+                      href={projects[activeIndex]?.link}
                       target="_blank"
                       rel="noopener noreferrer"
                       className="inline-block mt-4 px-6 py-2 rounded-full bg-white/10 hover:bg-white/20 transition-colors"
@@ -114,6 +117,10 @@ export default function ProjectsSection() {
                     >
                       Visit Case Study
                     </motion.a>
+                    ):<div>
+                      Client-hosted web application (private deployment)
+                      </div>}
+                    
                   </div>
                 </GlowingCard>
               </motion.div>
