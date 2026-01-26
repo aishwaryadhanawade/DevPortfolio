@@ -6,6 +6,7 @@ import Image from "next/image"
 import GlowingCard from "./ui/glowing-card"
 import buildCraft from "@/assets/buildCraf.png"
 import wanderlust from "@/assets/wanderlust.png"
+import batP from "@/assets/image.png"
 import bpo from "@/assets/bpo3.jpg"
 
 export default function ProjectsSection() {
@@ -35,14 +36,14 @@ export default function ProjectsSection() {
       image: bpo,
       color: "blue",
     },
-    // {
-    //   title: "AI Content Generator",
-    //   category: "AI Integration",
-    //   description: "An AI-powered tool that generates high-quality content for marketing teams.",
-    //   image: "/placeholder.svg?height=600&width=800",
-    //   color: "purple",
-    //   link: "https://example-ai-generator.com",
-    // },
+    {
+      title: "Riyaz Bats",
+      category: "E-commerce Website",
+      description: "A modern cricket bat e-commerce website developed using Next.js and React.js on the frontend, powered by a Node.js, Express.js, and MongoDB backend. Includes product listings, cart functionality, secure user authentication, and order management.",
+      image: batP,
+      color: "purple",
+      link: "https://bat-project-lake.vercel.app",
+    },
   ]
 
   return (
