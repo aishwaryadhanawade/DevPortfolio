@@ -3,6 +3,8 @@
 import { motion } from "framer-motion"
 import { Mail, MapPin, Phone } from "lucide-react"
 import GlowingButton from "./ui/glowing-button"
+import emailjs from 'emailjs-com';
+
 
 export default function ContactSection() {
   const formFields = [
@@ -45,7 +47,7 @@ export default function ContactSection() {
       const mailSubject = `${subject} — from ${name}`
       const body = `Name: ${name}\nEmail: ${from}\n\n${message}`
 
-      window.location.href = `mailto:${to}?subject=${encodeURIComponent(mailSubject)}&body=${encodeURIComponent(body)}`
+      // window.location.href = `mailto:${to}?subject=${encodeURIComponent(mailSubject)}&body=${encodeURIComponent(body)}`
       // Example using EmailJS for sending emails
       const serviceID = 'service_nqlei7x';
       const templateID = 'template_rtypaag';
@@ -123,7 +125,7 @@ export default function ContactSection() {
                   ></textarea>
                 </div>
                 <div>
-                  <GlowingButton type="submit" onClick={handleSubmit}>Send Message</GlowingButton>
+                  <GlowingButton type="submit" onClick={()=>handleSubmit()}>Send Message</GlowingButton>
                 </div>
               </form>
             </div>

@@ -3,6 +3,7 @@
 import { motion } from "framer-motion"
 import Image from "next/image"
 import GlowingButton from "./ui/glowing-button"
+import Link from "next/link"
 
 export default function HeroSection() {
   const containerVariants = {
@@ -72,14 +73,19 @@ export default function HeroSection() {
           </motion.p>
 
           <motion.div className="flex flex-wrap gap-4" variants={itemVariants}>
+            <Link href="#contact">
             <GlowingButton>Get Started</GlowingButton>
-            <motion.button
+          </Link>
+          <Link href='#projects'>
+           <motion.button
               className="px-6 py-3 rounded-full border border-white/20 hover:border-white/40 transition-colors"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.98 }}
             >
               Our Work
             </motion.button>
+          </Link>
+           
           </motion.div>
         </motion.div>
 
