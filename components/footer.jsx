@@ -5,15 +5,15 @@ import Link from "next/link"
 
 export default function Footer() {
   const footerLinks = [
-    {
-      title: "Company",
-      links: [
-        { name: "About", href: "#" },
-        { name: "Careers", href: "#" },
-        { name: "Blog", href: "#" },
-        { name: "Press", href: "#" },
-      ],
-    },
+    // {
+    //   title: "Company",
+    //   links: [
+    //     { name: "About", href: "#" },
+    //     { name: "Careers", href: "#" },
+    //     { name: "Blog", href: "#" },
+    //     { name: "Press", href: "#" },
+    //   ],
+    // },
     {
       title: "Services",
       links: [

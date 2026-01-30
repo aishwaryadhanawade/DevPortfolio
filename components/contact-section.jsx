@@ -90,7 +90,7 @@ export default function ContactSection() {
         </motion.div>
 
         <div className="grid md:grid-cols-12 gap-8">
-          <motion.div
+          {/* <motion.div
             className="md:col-span-7"
             initial={{ opacity: 0, x: -30 }}
             whileInView={{ opacity: 1, x: 0 }}
@@ -129,7 +129,7 @@ export default function ContactSection() {
                 </div>
               </form>
             </div>
-          </motion.div>
+          </motion.div> */}
 
           <motion.div
             className="md:col-span-5"

@@ -63,9 +63,11 @@ export default function Navbar() {
               </motion.span>
             </Link>
           ))}
+          {/*
            <Link href="#contact">
             <GlowingButton>Get Started</GlowingButton>
           </Link>
+          */}
         </div>
 
         {/* Mobile Navigation Toggle */}
