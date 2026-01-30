@@ -4,10 +4,10 @@ import { useState } from "react"
 import { motion, AnimatePresence } from "framer-motion"
 import Image from "next/image"
 import GlowingCard from "./ui/glowing-card"
-import buildCraft from "@/assets/buildCraf.png"
-import wanderlust from "@/assets/wanderlust.png"
-import batP from "@/assets/image.png"
-import bpo from "@/assets/bpo3.jpg"
+import buildCraft from "@/public/images/buildCraf.png"
+import wanderlust from "@/public/images/wanderlust.png"
+import batP from "@/public/images/image.png"
+import bpo from "@/public/images/bpo3.jpg"
 
 export default function ProjectsSection() {
   const [activeIndex, setActiveIndex] = useState(0)
